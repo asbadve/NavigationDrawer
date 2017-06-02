@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -18,7 +19,7 @@ import android.widget.ListView;
 /**
  * Created by ELY on 23/04/2015.
  */
-public class BaseActivity extends ActionBarActivity {
+public class BaseActivity extends AppCompatActivity {
 
     //Navigation Drawer
     public DrawerLayout drawerLayout;
@@ -87,7 +88,7 @@ public class BaseActivity extends ActionBarActivity {
         //Manage here what happens after item clicked in the Navigation Drawer
         drawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view,final int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
                 drawerLayout.closeDrawer(Gravity.START);
 
                 Handler mHandler = new Handler();
